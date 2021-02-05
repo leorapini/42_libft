@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpinheir <lpinheir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:47:28 by lpinheir          #+#    #+#             */
 /*   Updated: 2021/02/04 16:09:32 by lpinheir         ###   ########.fr       */

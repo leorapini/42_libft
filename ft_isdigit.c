@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpinheir <lpinheir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 16:38:09 by lpinheir          #+#    #+#             */
 /*   Updated: 2021/02/04 16:43:54 by lpinheir         ###   ########.fr       */

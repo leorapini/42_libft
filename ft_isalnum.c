@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpinheir <lpinheir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 17:08:50 by lpinheir          #+#    #+#             */
 /*   Updated: 2021/02/04 17:13:26 by lpinheir         ###   ########.fr       */

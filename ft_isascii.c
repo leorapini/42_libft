@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpinheir <lpinheir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 17:16:51 by lpinheir          #+#    #+#             */
 /*   Updated: 2021/02/04 17:18:26 by lpinheir         ###   ########.fr       */
