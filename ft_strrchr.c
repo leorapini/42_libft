@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/04 16:11:28 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/05 11:59:31 by lpinheir         ###   ########.fr       */
+/*   Created: 2021/02/05 14:08:34 by lpinheir          #+#    #+#             */
+/*   Updated: 2021/02/05 14:15:12 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c > 64 && c < 91)
-		return (c + 32);
-	else
-		return (c);
+	char target;
+	const char *found;
+	
+	target = (unsigned char)c;
+	found = 0;
+	while (*s != 0)
+	{
+		if (*s == target)
+			found = s;
+		s++;
+	}
+	return ((char *)found);
 }
-

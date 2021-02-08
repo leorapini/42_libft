@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/04 17:48:19 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/05 12:04:49 by lpinheir         ###   ########.fr       */
+/*   Created: 2021/02/05 11:01:46 by lpinheir          #+#    #+#             */
+/*   Updated: 2021/02/05 12:02:52 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srclen;
+	size_t	total;
 	size_t	counter;
 
 	srclen = ft_strlen(src);
+	total = srclen + ft_strlen(dst);
 	counter = 0;
 	if (dstsize == 0)
 		return (srclen);
-	while (*src != 0 && counter < (dstsize - 1))
+	while (*dst != 0)
+	{
+		dst++;
+		counter++;
+	}
+	while (*src != 0 && counter < (total - 1))
 	{
 		*dst = *src;
 		src++;
@@ -29,6 +36,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		counter++;
 	}
 	*dst = 0;
-	return (srclen);
+	return (srclen); 
 }
 
