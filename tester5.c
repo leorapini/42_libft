@@ -1,11 +1,19 @@
 #include <stdio.h>
 #include <strings.h>
+#include <stdlib.h>
 
 //#include "ft_bzero.c"
-#include "ft_calloc.c"
+//#include "ft_calloc.c"
+#include "ft_strdup.c"
 
 int	main(void)
 {
+	char s1[] = "this is a test";
+	char *string = ft_strdup(s1);
+	
+	printf("%s\n", string);
+
+	/*
 	int count;
 	int number1, number2, number3;
 	int *data;
@@ -30,6 +38,8 @@ int	main(void)
 		printf("Number: %d\n", data[i]);
 		i++;
 	}
+	free(data);
+	*/
 
 	/* bzero
 	char s[] = "ulala";

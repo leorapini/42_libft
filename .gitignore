@@ -1,0 +1,6 @@
+tester*
+a.out
+.gitignore
+*.bak
+Libftest/
+
