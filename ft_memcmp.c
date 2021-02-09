@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/05 13:12:45 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/08 16:05:45 by lpinheir         ###   ########.fr       */
+/*   Created: 2021/02/08 17:16:59 by lpinheir          #+#    #+#             */
+/*   Updated: 2021/02/08 17:33:33 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	char target;
+#include "libft.h"
 
-	target = (char)c;
-	while (*s != 0)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	unsigned char *news1;
+	unsigned char *news2;
+
+	news1 = (unsigned char *)s1;
+	news2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while (n > 0)
 	{
-		if (*s == target)
-			return ((char *)s);
-		s++;
+		if (*news1 > *news2)
+			return (1);
+		else if (*news1 < *news2)
+			return (-1);
+		news1++;
+		news2++;
+		n--;
 	}
 	return (0);
 }

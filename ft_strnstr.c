@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/05 13:12:45 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/08 16:05:45 by lpinheir         ###   ########.fr       */
+/*   Created: 2021/02/08 09:38:43 by lpinheir          #+#    #+#             */
+/*   Updated: 2021/02/08 12:28:03 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char target;
+	const char	*found;
+	size_t	i;
+	size_t	j;
 
-	target = (char)c;
-	while (*s != 0)
+	i = 0;
+	if (*needle == 0)
+		return ((char *)haystack);
+	while (haystack[i] != 0 && len > 0)
 	{
-		if (*s == target)
-			return ((char *)s);
-		s++;
+		j = 0;
+		found = 0;
+		while ((int)haystack[i] == (int)needle[j])
+		{
+			if (found == 0)
+				found = &haystack[i];
+			if (needle[j + 1] == 0)
+				return ((char *)found);
+			i++;
+			j++;
+		}
+		if (found != 0)
+			i--;
+		i++;
 	}
 	return (0);
 }

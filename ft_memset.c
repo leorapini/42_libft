@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/05 13:12:45 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/08 16:05:45 by lpinheir         ###   ########.fr       */
+/*   Created: 2021/02/08 17:46:08 by lpinheir          #+#    #+#             */
+/*   Updated: 2021/02/08 18:06:07 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	char target;
+#include "libft.h"
 
-	target = (char)c;
-	while (*s != 0)
+void	*ft_memset(void *b, int c, size_t len)
+{	
+	unsigned char *newb;
+
+	newb = (unsigned char *)b;
+	while (len > 0)
 	{
-		if (*s == target)
-			return ((char *)s);
-		s++;
+		*newb = (unsigned char)c;
+		newb++;
+		len--;
 	}
-	return (0);
+	return (b);
 }

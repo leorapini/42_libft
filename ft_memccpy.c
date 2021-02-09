@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/05 13:12:45 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/08 16:05:45 by lpinheir         ###   ########.fr       */
+/*   Created: 2021/02/08 15:49:05 by lpinheir          #+#    #+#             */
+/*   Updated: 2021/02/08 16:56:06 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	char target;
+#include "libft.h"
 
-	target = (char)c;
-	while (*s != 0)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+	unsigned char	target;
+	unsigned char	*newdst;
+	unsigned char	*newsrc;
+
+	target = (unsigned char)c;
+	newdst = (unsigned char *)dst;
+	newsrc = (unsigned char *)src;
+	while (n > 0)
 	{
-		if (*s == target)
-			return ((char *)s);
-		s++;
+		*newdst = *newsrc;
+		if (*newsrc == target)
+		{
+			newdst++;
+			return ((void *)newdst);
+		}
+		newdst++;
+		newsrc++;
+		n--;
 	}
 	return (0);
 }
