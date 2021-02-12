@@ -6,13 +6,13 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:11:20 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 00:54:41 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 13:06:28 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_getlen(long int num, int sign)
+static int	ft_getlen(long int num, int sign)
 {
 	int	length;
 
@@ -31,26 +31,29 @@ int	ft_getlen(long int num, int sign)
 
 char		*ft_itoa(int n)
 {
-	char	*buffer;
-	int	len;
-	int	sign;
+	char		*buffer;
+	int		len;
+	int		sign;
+	unsigned int	new_n;	
 
 	sign = 1;
 	if (n < 0)
 	{
 		sign = -1;
-		n = n * sign;
+		new_n = (unsigned int)n * sign;
 	}
+	else
+		new_n = (unsigned int)n;
 	len = ft_getlen(n, sign);
 	buffer = (char *)malloc(sizeof(char) * len + 1);
 	if (buffer == NULL)
 		return (NULL);
-	if (n == 0)
+	if (new_n == 0)
 		buffer[0] = '0';
-	while (n != 0 && len >= 0)
+	while (new_n != 0 && len >= 0)
 	{
-		buffer[len - 1] = n % 10 + '0';
-		n = n / 10;
+		buffer[len - 1] = new_n % 10 + '0';
+		new_n = new_n / 10;
 		len--;
 	}
 	if (sign == -1)
