@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 13:12:45 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:29:58 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 14:42:49 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char target;
+	char 	target;
+	int	len;
 
 	target = (char)c;
-	while (*s != 0)
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
+		if (*s == target && target == '\0')
+			return ((char *)s);
 		if (*s == target)
 			return ((char *)s);
+		if (*s == '\0')
+			return (0);
 		s++;
 	}
 	return (0);
