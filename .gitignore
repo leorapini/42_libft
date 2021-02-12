@@ -5,6 +5,7 @@ tester4.c
 tester5.c
 tester6.c
 tester7.c
+tester8.c
 a.out
 .gitignore
 *.bak

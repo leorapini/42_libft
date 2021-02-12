@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/10 15:51:00 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/11 16:09:56 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "ft_strlen.c"
 #include "ft_strlcpy.c"
 #include <stdio.h>
+
+// Add NULL pointer to the array
 
 size_t	occur(char const *s, char c)
 {
