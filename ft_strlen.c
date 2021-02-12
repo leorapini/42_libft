@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 09:38:21 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/04 16:00:54 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:43:54 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ size_t	ft_strlen(const char *s)
 		len++;
 	return (len);
 }
-

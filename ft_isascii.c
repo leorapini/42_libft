@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 17:16:51 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:25:35 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:45:10 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
- 

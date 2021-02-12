@@ -6,13 +6,13 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:48:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:34:17 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:51:51 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*buffer;
 	size_t	lens1;
@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		lenbuffer = lenbuffer - lenset;
 	if (end == 0)
 		lenbuffer = lenbuffer - lenset;
-	buffer = (char *)malloc(sizeof(*s1) * (lenbuffer + 1)); 
+	buffer = (char *)malloc(sizeof(*s1) * (lenbuffer + 1));
 	if (buffer == NULL)
 		return (NULL);
 	if ((lenbuffer == lens1) || (start != 0 && end == 0))
@@ -38,4 +38,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	else
 		ft_strlcpy(buffer, s1 + lenset, lenbuffer + 1);
 	return (buffer);
-}	
+}

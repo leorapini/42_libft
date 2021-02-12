@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 17:08:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:24:46 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:54:21 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-

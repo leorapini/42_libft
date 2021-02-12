@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 16:38:09 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:25:55 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:42:38 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-

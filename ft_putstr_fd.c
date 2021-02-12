@@ -6,20 +6,20 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 22:05:12 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 00:06:00 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:43:23 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
-{	
+{
 	if (s != 0 && fd >= 0)
 	{
 		while (*s != 0)
 		{
 			ft_putchar_fd(*s, fd);
 			s++;
-		}	
-	}	
+		}
+	}
 }

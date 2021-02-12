@@ -6,16 +6,16 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 14:08:34 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:33:56 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:49:56 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char			*ft_strrchr(const char *s, int c)
 {
-	char target;
-	const char *found;
+	char		target;
+	const char	*found;
 	
 	target = (unsigned char)c;
 	found = 0;

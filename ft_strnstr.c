@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 09:38:43 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:41:28 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:41:41 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	const char	*found;
-	size_t	i;
-	size_t	j;
+	size_t		i;
+	size_t		j;
 
 	i = 0;
 	if (*needle == 0)

@@ -6,12 +6,12 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 09:56:56 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:20:41 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:45:57 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef		LIBFT_H
+# define	LIBFT_H
 
 # include <stdlib.h>
 

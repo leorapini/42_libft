@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:47:28 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:35:34 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:46:15 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,3 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
-

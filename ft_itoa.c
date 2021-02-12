@@ -6,13 +6,13 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:11:20 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/09 21:10:51 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:54:41 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_getlen(long int num, int sign)
+int	ft_getlen(long int num, int sign)
 {
 	int	length;
 

@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:47:48 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:48:00 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	occur(char const *s, char c)
 {
-	int 	i;
+	int	i;
 	size_t	count;
 
 	i = 0;
@@ -29,12 +29,12 @@ size_t	occur(char const *s, char c)
 }
 
 char	**ft_split(char const *s, char c)
-{	
-	char	**result;;
+{
+	char	**result;
 	size_t	i;
 	size_t	j;
 	size_t	count;
-	
+
 	count = occur(s, c);
 	if (count == 0)
 		return (NULL);
@@ -46,17 +46,17 @@ char	**ft_split(char const *s, char c)
 	while (j < count)
 	{
 		if (*s == c || *s == '\0')
-		{	
+		{
 			result[j] = (char*)malloc(sizeof(char) * (i + 1));
 			if (result[j] == NULL)
 				return (NULL);
-			ft_strlcpy(result[j], s - i, i + 1);	
+			ft_strlcpy(result[j], s - i, i + 1);
 			j++;
 			i = 0;
 		}
 		i++;
 		s++;
-		
+
 	}
 	return (result);
 }
