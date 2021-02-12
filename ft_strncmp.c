@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 12:41:29 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:33:17 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:59:43 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int diff;
-	
+
 	diff = 0;
 	if (n == 0)
 		return (0);

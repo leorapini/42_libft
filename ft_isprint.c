@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 16:58:31 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:26:18 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 01:01:05 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
