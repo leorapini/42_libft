@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 23:26:44 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:28:10 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 00:08:24 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void			ft_putnbr_fd(int n, int fd)
 	{
 		if (n < 0)
 		{
-			write(fd, "-", 1);
+			ft_putchar_fd('-', fd);
 			u_n = n * -1;
 		}
 		else
@@ -29,6 +29,6 @@ void			ft_putnbr_fd(int n, int fd)
 		if (u_n > 9)
 			ft_putnbr_fd(u_n / 10, fd);
 		c_print = (u_n % 10) + '0';
-		write(fd, &c_print, 1);
+		ft_putchar_fd(c_print, fd);
 	}
 }

@@ -6,12 +6,11 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/11 23:29:34 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/11 23:47:48 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// Add NULL pointer to the array
 
 size_t	occur(char const *s, char c)
 {
@@ -39,7 +38,6 @@ char	**ft_split(char const *s, char c)
 	count = occur(s, c);
 	if (count == 0)
 		return (NULL);
-	printf("total strings: %zu\n", count);
 	result = malloc(sizeof(char*) * count);
 	if (result == NULL)
 		return (NULL);
