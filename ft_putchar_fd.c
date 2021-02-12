@@ -6,12 +6,11 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 21:57:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/09 22:32:44 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/11 23:27:42 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

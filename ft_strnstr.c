@@ -6,9 +6,11 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 09:38:43 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/08 12:28:03 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/11 23:33:33 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft_.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

@@ -6,16 +6,11 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:48:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/09 19:57:32 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/11 23:34:17 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include "ft_strlen.c"
-#include "ft_strncmp.c"
-#include "ft_memcpy.c"
-#include "ft_strlcpy.c"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

@@ -6,9 +6,11 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 12:41:29 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/08 17:29:22 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/11 23:33:17 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

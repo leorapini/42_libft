@@ -6,9 +6,11 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 16:38:09 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/04 16:43:54 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/11 23:25:55 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
