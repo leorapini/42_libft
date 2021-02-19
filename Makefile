@@ -6,7 +6,7 @@
 #    By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 21:11:28 by lpinheir          #+#    #+#              #
-#    Updated: 2021/02/11 23:49:25 by lpinheir         ###   ########.fr        #
+#    Updated: 2021/02/19 15:38:39 by lpinheir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ SRC = 	$(S_DIR)/ft_memset.c	\
 	$(S_DIR)/ft_putchar_fd.c\
 	$(S_DIR)/ft_putstr_fd.c	\
 	$(S_DIR)/ft_putendl_fd.c\
-	$(S_DIR)/ft_putnbr_fd.c
+	$(S_DIR)/ft_putnbr_fd.c	\
+	$(S_DIR)/ft_strmapi.c
 
 O_DIR = ./
 OBJ = $(patsubst $(S_DIR)/%.c, $(O_DIR)/%.o, $(SRC)) 

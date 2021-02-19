@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 14:08:34 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 16:29:52 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/19 18:08:23 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char			*ft_strrchr(const char *s, int c)
 		if (*s == target)
 			found = s;
 		if (*s == 0)
-			break;
+			break ;
 		len--;
 		s++;
 	}

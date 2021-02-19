@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:11:20 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/19 15:33:08 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/19 18:23:14 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ static size_t	ft_getlen(long int num, int sign)
 	return (length);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char		*buffer;
-	size_t		len;
-	int		sign;
+	char	*buffer;
+	size_t	len;
+	int	sign;
 	unsigned int	new_n;
 
 	sign = 1;

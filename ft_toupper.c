@@ -6,11 +6,9 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:47:28 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 00:46:15 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/19 19:00:19 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

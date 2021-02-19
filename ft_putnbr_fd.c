@@ -6,13 +6,13 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 23:26:44 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 00:44:22 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/19 18:05:08 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void			ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	u_n;
 	char		c_print;

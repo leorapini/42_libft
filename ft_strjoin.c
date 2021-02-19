@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:12:19 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 00:44:40 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/19 18:06:29 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	buffer = (char *)malloc(sizeof(*s1) *
+	buffer = (char*)malloc(sizeof(*s1) *
 			((ft_strlen(s1) + ft_strlen(s2)) + 1));
 	if (buffer == NULL)
 		return (NULL);
