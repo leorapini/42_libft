@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 00:48:00 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/12 19:54:44 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	occur(char const *s, char c)
 			count++;
 		i++;
 	}
-	return (count + 1);
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
@@ -38,12 +38,12 @@ char	**ft_split(char const *s, char c)
 	count = occur(s, c);
 	if (count == 0)
 		return (NULL);
-	result = malloc(sizeof(char*) * count);
+	result = malloc(sizeof(char*) * count + 2);
 	if (result == NULL)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (j < count)
+	while (j < count + 2)
 	{
 		if (*s == c || *s == '\0')
 		{
@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 		s++;
-
 	}
+	result[j] = NULL;;
 	return (result);
 }

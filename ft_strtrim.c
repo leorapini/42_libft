@@ -6,36 +6,53 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:48:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 00:51:51 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/18 21:51:01 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t	ft_startindex(const char *s1, const char *set)
+{
+	size_t	i;
+
+	i = 0;
+	while (s1[i] != 0)
+	{
+		if (ft_strchr(set, s1[i]) == 0)
+			break ;
+		i++;
+	}
+	return (i);
+}
+
+static size_t	ft_endindex(const char *s1, const char *set)
+{
+	size_t	i;
+
+	i = ft_strlen(s1) - 1;
+	while (i > 0)
+	{
+		if (ft_strchr(set, s1[i]) == 0)
+			break ;
+		i--;
+	}
+	return (i);
+}
+
 char		*ft_strtrim(char const *s1, char const *set)
 {
+	size_t	start_i;
+	size_t	end_i;
 	char	*buffer;
-	size_t	lens1;
-	size_t	lenset;
-	size_t	lenbuffer;
-	int	start;
-	int	end;
 
-	lens1 = ft_strlen(s1);
-	lenset = ft_strlen(set);
-	lenbuffer = lens1;
-	start = ft_strncmp(s1, set, lenset);
-	end = ft_strncmp(s1 + lens1 - lenset, set, lenset);
-	if (start == 0)
-		lenbuffer = lenbuffer - lenset;
-	if (end == 0)
-		lenbuffer = lenbuffer - lenset;
-	buffer = (char *)malloc(sizeof(*s1) * (lenbuffer + 1));
+	start_i = ft_startindex(s1, set);
+	end_i = ft_endindex(s1, set);
+	if (start_i > end_i)
+		return (ft_strdup(""));
+	buffer = (char *)malloc(sizeof(char) * (end_i - start_i + 2));
 	if (buffer == NULL)
 		return (NULL);
-	if ((lenbuffer == lens1) || (start != 0 && end == 0))
-		ft_strlcpy(buffer, s1, lenbuffer + 1);
-	else
-		ft_strlcpy(buffer, s1 + lenset, lenbuffer + 1);
+	ft_strlcpy(buffer, s1 + start_i, end_i - start_i + 2);
 	return (buffer);
 }
