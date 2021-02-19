@@ -6,15 +6,15 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:11:20 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 13:06:28 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/19 15:33:08 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_getlen(long int num, int sign)
+static size_t	ft_getlen(long int num, int sign)
 {
-	int	length;
+	size_t	length;
 
 	length = 0;
 	if (num == 0)
@@ -29,27 +29,23 @@ static int	ft_getlen(long int num, int sign)
 	return (length);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char		*buffer;
-	int		len;
+	size_t		len;
 	int		sign;
-	unsigned int	new_n;	
+	unsigned int	new_n;
 
 	sign = 1;
 	if (n < 0)
-	{
 		sign = -1;
-		new_n = (unsigned int)n * sign;
-	}
-	else
-		new_n = (unsigned int)n;
+	new_n = (unsigned int)n * sign;
 	len = ft_getlen(n, sign);
-	buffer = (char *)malloc(sizeof(char) * len + 1);
-	if (buffer == NULL)
+	if (!(buffer = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	if (new_n == 0)
 		buffer[0] = '0';
+	buffer[len] = '\0';
 	while (new_n != 0 && len >= 0)
 	{
 		buffer[len - 1] = new_n % 10 + '0';
