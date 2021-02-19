@@ -6,57 +6,58 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 19:54:44 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/19 14:45:27 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	occur(char const *s, char c)
+static size_t	ft_words(char const *s, char c)
 {
-	int	i;
 	size_t	count;
+	size_t	flag;
 
-	i = 0;
+	flag = 0;
 	count = 0;
-	while (s[i] != 0)
+	while (*s != 0)
 	{
-		if (s[i] == c)
+		if (*s != c && flag == 0)
+		{
+			flag = 1;
 			count++;
-		i++;
+		}
+		else if (*s == c)
+			flag = 0;
+		s++;
 	}
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**result;
-	size_t	i;
+	size_t	len_str;
 	size_t	j;
 	size_t	count;
 
-	count = occur(s, c);
-	if (count == 0)
+	count = ft_words(s, c);
+	if (!(result = malloc(sizeof(char*) * count + 1)))
 		return (NULL);
-	result = malloc(sizeof(char*) * count + 2);
-	if (result == NULL)
-		return (NULL);
-	i = 0;
 	j = 0;
-	while (j < count + 2)
+	while (j < count)
 	{
-		if (*s == c || *s == '\0')
+		len_str = 0;
+		while (*s == c && *s != 0)
+			s++;
+		while (*s != 0 && *s != c)
 		{
-			result[j] = (char*)malloc(sizeof(char) * (i + 1));
-			if (result[j] == NULL)
-				return (NULL);
-			ft_strlcpy(result[j], s - i, i + 1);
-			j++;
-			i = 0;
+			len_str++;
+			s++;
 		}
-		i++;
-		s++;
+		result[j] = (char*)malloc(sizeof(char) * (len_str + 1));
+		ft_strlcpy(result[j], s - len_str, len_str + 1);
+		j++;
 	}
-	result[j] = NULL;;
+	result[j] = NULL;
 	return (result);
 }
