@@ -6,16 +6,16 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 09:40:10 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/19 18:18:43 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/20 14:02:26 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*buffer;
-	int	len;
+	int		len;
 
 	len = ft_strlen(s1);
 	buffer = (char *)malloc(sizeof(*s1) * (len + 1));

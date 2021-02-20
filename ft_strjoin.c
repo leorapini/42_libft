@@ -6,16 +6,16 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:12:19 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/19 23:49:37 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/20 13:50:01 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*buffer;
 
 	i = 0;

@@ -6,16 +6,16 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 13:12:45 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/19 18:05:45 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/20 13:55:37 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	target;
-	int	len;
+	int		len;
 
 	target = (char)c;
 	len = ft_strlen(s);
