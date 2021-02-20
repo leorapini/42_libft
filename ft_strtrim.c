@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:48:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/20 00:21:41 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/20 03:13:39 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size_t	start_i;
 	size_t	end_i;
 	char	*buffer;
-	
+
 	if (!s1)
 		return (NULL);
 	start_i = ft_startindex(s1, set);
