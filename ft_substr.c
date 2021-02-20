@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 10:38:56 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/19 18:08:47 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/19 21:26:59 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*buffer;
 	int	i;
-
-	i = 0;
+	
+	if (s == NULL)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
 	buffer = (char *)malloc(sizeof(*s) * (len + 1));
 	if (buffer == NULL)
 		return (NULL);
+	i = 0;
 	while (len > 0)
 	{
 		buffer[i] = s[start];

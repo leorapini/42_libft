@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 15:35:31 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/19 18:09:32 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/20 01:05:03 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int	len;
 	int	i;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	len = ft_strlen(s);
-	buffer = malloc(sizeof(char*) * len + 1);
+	buffer = malloc(sizeof(*buffer) * len + 1);
+	if (!buffer)
+		return (NULL);
 	i = 0;
 	while (s[i] != 0)
 	{

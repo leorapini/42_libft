@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/19 14:45:27 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/20 00:23:04 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char		**ft_split(char const *s, char c)
 	size_t	j;
 	size_t	count;
 
+	if (!s)
+		return (NULL);
 	count = ft_words(s, c);
 	if (!(result = malloc(sizeof(char*) * count + 1)))
 		return (NULL);

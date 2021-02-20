@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 12:58:38 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/19 18:19:36 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/19 20:47:43 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ int	ft_atoi(const char *src)
 {
 	int	result;
 	int	sign;
+	int	control;
 
 	sign = 1;
 	result = 0;
+	control = 0;
 	if (*src == 0)
 		return (0);
 	while (ft_isspace(*src))
