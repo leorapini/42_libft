@@ -6,13 +6,13 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/20 19:08:20 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/20 19:12:20 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_words(char const *s, char c)
+static size_t		ft_words(char const *s, char c)
 {
 	size_t	count;
 	size_t	flag;
@@ -40,7 +40,7 @@ static const char	*ft_fuckthis(char const *s, char c)
 	return (s);
 }
 
-char		**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
 	char	**result;
 	size_t	len_str;
