@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 17:16:59 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/19 19:54:47 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/20 03:26:13 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (n > 0)
 	{
 		if (*news1 != *news2)
-			return (*news1 - *news2);;
+			return (*news1 - *news2);
 		news1++;
 		news2++;
 		n--;
