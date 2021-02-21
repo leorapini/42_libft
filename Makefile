@@ -6,14 +6,14 @@
 #    By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 21:11:28 by lpinheir          #+#    #+#              #
-#    Updated: 2021/02/19 15:38:39 by lpinheir         ###   ########.fr        #
+#    Updated: 2021/02/20 23:03:11 by lpinheir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC_FLAGS = -Wall -Wextra -Werror
-AR_FLAGS = rcs
+AR_FLAGS = -rcs
 RM_FLAGS = -f
 
 S_DIR = ./

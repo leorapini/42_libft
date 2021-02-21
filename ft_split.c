@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/20 19:16:22 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/02/20 23:04:22 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t		ft_words(char const *s, char c)
 	return (count);
 }
 
-static const char	*ft_isc(char const *s, char c)
+static char const	*ft_isc(char const *s, char c)
 {
 	while (*s == c && *s != 0)
 		s++;
