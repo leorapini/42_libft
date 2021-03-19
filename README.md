@@ -7,7 +7,7 @@ Part of the 42 cursus (42 École / 42 São Paulo), libft is my own personal libr
 
 ## Features
 
-Many, **many**, functions from string manipulation to memory addressing. And it has its own fancy ass Makefile! 
+Many, **many**, many functions, from string manipulation to memory addressing. And it has its own fancy ass Makefile! 
 
 
 ## Technologies
