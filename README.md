@@ -1,5 +1,5 @@
 # libft
-Why use pre-built functions when you can write them yourself?
+Why use pre-built C functions when you can write them yourself?
 
 ## Motivation
 
