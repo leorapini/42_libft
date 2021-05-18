@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_uitoh.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/09 20:11:20 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/18 15:14:30 by lpinheir         ###   ########.fr       */
+/*   Created: 2021/04/30 17:20:53 by lpinheir          #+#    #+#             */
+/*   Updated: 2021/05/18 15:23:54 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_getlen(long int num, int sign)
+static size_t	ft_getlen_uitoh(uintptr_t num, int sign)
 {
 	size_t	length;
 
@@ -21,7 +21,7 @@ static size_t	ft_getlen(long int num, int sign)
 		return (1);
 	while (num != 0)
 	{
-		num = num / 10;
+		num = num / 16;
 		length++;
 	}
 	if (sign < 0)
@@ -29,31 +29,30 @@ static size_t	ft_getlen(long int num, int sign)
 	return (length);
 }
 
-char	*ft_itoa(int n)
+char	*ft_uitoh(uintptr_t n, int cap)
 {
-	char			*buffer;
-	size_t			len;
-	int				sign;
-	unsigned int	new_n;
+	char		*buffer;
+	int			len;
+	uintptr_t	new_n;
 
-	sign = 1;
-	if (n < 0)
-		sign = -1;
-	new_n = (unsigned int)n * sign;
-	len = ft_getlen(n, sign);
+	len = ft_getlen_itoh(n, 1);
 	buffer = (char *)malloc(sizeof(char) * len + 1);
-	if (!buffer)
+	if (!(buffer))
 		return (NULL);
-	if (new_n == 0)
+	if (n == 0)
 		buffer[0] = '0';
 	buffer[len] = '\0';
-	while (new_n != 0 && len >= 0)
+	while (n != 0 && len >= 0)
 	{
-		buffer[len - 1] = new_n % 10 + '0';
-		new_n = new_n / 10;
+		new_n = n % 16;
+		if (new_n < 10)
+			buffer[len - 1] = new_n + 48;
+		else if (new_n >= 10 && cap == 0)
+			buffer[len - 1] = new_n + 87;
+		else
+			buffer[len - 1] = new_n + 55;
+		n = n / 16;
 		len--;
 	}
-	if (sign == -1)
-		buffer[0] = '-';
 	return (buffer);
 }

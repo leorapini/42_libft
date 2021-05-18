@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_count.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 17:46:08 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/18 15:09:22 by lpinheir         ###   ########.fr       */
+/*   Created: 2021/04/30 18:03:42 by lpinheir          #+#    #+#             */
+/*   Updated: 2021/05/18 15:38:46 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+int	ft_putchar(char c)
 {
-	unsigned char	*newb;
-
-	newb = (unsigned char *)b;
-	while (len > 0)
-	{
-		*newb = (unsigned char)c;
-		newb++;
-		len--;
-	}
-	return (b);
+	write(1, &c, 1);
+	return (1);
 }

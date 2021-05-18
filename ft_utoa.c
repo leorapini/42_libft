@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_utoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/09 20:11:20 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/18 15:14:30 by lpinheir         ###   ########.fr       */
+/*   Created: 2021/04/30 17:17:56 by lpinheir          #+#    #+#             */
+/*   Updated: 2021/05/18 15:31:00 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_getlen(long int num, int sign)
+static size_t	ft_getlen_utoa(unsigned int num)
 {
 	size_t	length;
 
@@ -24,25 +24,19 @@ static size_t	ft_getlen(long int num, int sign)
 		num = num / 10;
 		length++;
 	}
-	if (sign < 0)
-		length++;
 	return (length);
 }
 
-char	*ft_itoa(int n)
+char	*ft_utoa(unsigned int n)
 {
 	char			*buffer;
 	size_t			len;
-	int				sign;
 	unsigned int	new_n;
 
-	sign = 1;
-	if (n < 0)
-		sign = -1;
-	new_n = (unsigned int)n * sign;
-	len = ft_getlen(n, sign);
+	new_n = n;
+	len = ft_getlen_utoa(n);
 	buffer = (char *)malloc(sizeof(char) * len + 1);
-	if (!buffer)
+	if (!(buffer))
 		return (NULL);
 	if (new_n == 0)
 		buffer[0] = '0';
@@ -53,7 +47,5 @@ char	*ft_itoa(int n)
 		new_n = new_n / 10;
 		len--;
 	}
-	if (sign == -1)
-		buffer[0] = '-';
 	return (buffer);
 }

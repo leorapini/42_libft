@@ -6,13 +6,13 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/20 23:04:22 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/18 15:07:42 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		ft_words(char const *s, char c)
+static size_t	ft_words(char const *s, char c)
 {
 	size_t	count;
 	size_t	flag;
@@ -40,7 +40,7 @@ static char const	*ft_isc(char const *s, char c)
 	return (s);
 }
 
-char				**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	size_t	len_str;
@@ -50,7 +50,8 @@ char				**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	count = ft_words(s, c);
-	if (!(result = malloc(sizeof(char*) * count + 1)))
+	result = malloc(sizeof(char *) * count + 1);
+	if (!result)
 		return (NULL);
 	j = 0;
 	while (j < count)
@@ -62,7 +63,7 @@ char				**ft_split(char const *s, char c)
 			len_str++;
 			s++;
 		}
-		result[j] = (char*)malloc(sizeof(char) * (len_str + 1));
+		result[j] = (char *)malloc(sizeof(char) * (len_str + 1));
 		ft_strlcpy(result[j++], s - len_str, len_str + 1);
 	}
 	result[j] = NULL;

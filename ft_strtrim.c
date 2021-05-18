@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:48:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/20 14:00:51 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/18 15:09:49 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static size_t	ft_endindex(const char *s1, const char *set)
 	return (i);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start_i;
 	size_t	end_i;

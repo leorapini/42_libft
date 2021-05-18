@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 12:58:38 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/20 14:03:23 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/18 15:12:49 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 static int	ft_isspace(char c)
 {
-	if (c == ' ' || c == '\n' || c == '\r' ||
-			c == '\t' || c == '\v' || c == '\f')
+	if (c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == '\v' || c == '\f')
 		return (1);
 	else
 		return (0);
 }
 
-int			ft_atoi(const char *src)
+int	ft_atoi(const char *src)
 {
 	int	result;
 	int	sign;
