@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 09:56:56 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/18 15:44:06 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/18 15:47:20 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_uitoh(uintptr_t n, int cap);
 char	*ft_utoa(unsigned int n);
 int	ft_putstr_count_limit(char *s, int limit);
-int	ft_putchar(char c);
+int	ft_putchar_count(char c);
 
 #endif

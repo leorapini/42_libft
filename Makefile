@@ -6,7 +6,7 @@
 #    By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 21:11:28 by lpinheir          #+#    #+#              #
-#    Updated: 2021/05/18 15:45:52 by lpinheir         ###   ########.fr        #
+#    Updated: 2021/05/18 15:47:59 by lpinheir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ SRC = 	$(S_DIR)/ft_memset.c	\
 	$(S_DIR)/ft_putendl_fd.c\
 	$(S_DIR)/ft_putnbr_fd.c	\
 	$(S_DIR)/ft_strmapi.c   \
-	$(S_DIR)/ft_itoh.c      \
+	$(S_DIR)/ft_uitoh.c      \
 	$(S_DIR)/ft_utoa.c	\
 	$(S_DIR)/ft_putstr_count_limit.c \
 	$(S_DIR)/ft_putchar_count.c 	 \
