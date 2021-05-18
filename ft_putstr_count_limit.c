@@ -23,7 +23,7 @@ int	ft_putstr_count_limit(char *s, int limit)
 		{
 			while (*s != 0 && limit > 0)
 			{
-				counter += ft_putchar(*s);
+				counter += ft_putchar_count(*s);
 				s++;
 				limit--;
 			}
@@ -32,7 +32,7 @@ int	ft_putstr_count_limit(char *s, int limit)
 		{
 			while (*s != 0)
 			{
-				counter += ft_putchar(*s);
+				counter += ft_putchar_count(*s);
 				s++;
 			}
 		}

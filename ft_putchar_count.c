@@ -6,13 +6,13 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 18:03:42 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/18 15:38:46 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/18 15:51:39 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-int	ft_putchar(char c)
+int	ft_putchar_count(char c)
 {
 	write(1, &c, 1);
 	return (1);

@@ -35,7 +35,7 @@ char	*ft_uitoh(uintptr_t n, int cap)
 	int			len;
 	uintptr_t	new_n;
 
-	len = ft_getlen_itoh(n, 1);
+	len = ft_getlen_uitoh(n, 1);
 	buffer = (char *)malloc(sizeof(char) * len + 1);
 	if (!(buffer))
 		return (NULL);
