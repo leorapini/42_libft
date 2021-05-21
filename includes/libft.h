@@ -6,14 +6,19 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 09:56:56 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/18 15:47:20 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/21 11:47:57 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <unistd.h>
 # include <stdlib.h>
+
+/* FOR GET NEXT LINE */
+# define OPEN_MAX 256
+# define BUFFER_SIZE 1000
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -54,5 +59,6 @@ int		ft_toupper(int c);
 void	ft_putchar(char c);
 char	*ft_uitoh(uintptr_t n, int cap);
 char	*ft_utoa(unsigned int n);
+int	get_next_line(int fd, char **line);
 
 #endif

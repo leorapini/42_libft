@@ -6,7 +6,7 @@
 #    By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 21:11:28 by lpinheir          #+#    #+#              #
-#    Updated: 2021/05/21 09:52:08 by lpinheir         ###   ########.fr        #
+#    Updated: 2021/05/21 11:55:45 by lpinheir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ SRC = $(S_DIR)/ft_atoi.c	\
 	$(S_DIR)/ft_toupper.c	\
 	$(S_DIR)/ft_uitoh.c     \
 	$(S_DIR)/ft_utoa.c 		\
+	$(S_DIR)/get_next_line.c	\
 
 
 O_DIR = objs
