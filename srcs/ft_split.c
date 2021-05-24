@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 20:04:50 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/18 15:07:42 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/24 08:20:16 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,15 @@ static size_t	ft_words(char const *s, char c)
 	return (count);
 }
 
-static char const	*ft_isc(char const *s, char c)
+static char const	*ft_isc(char const *s, char c, size_t *len_str)
 {
 	while (*s == c && *s != 0)
 		s++;
+	while (*s != c && *s != 0)
+	{
+		(*len_str)++;
+		s++;
+	}
 	return (s);
 }
 
@@ -57,12 +62,7 @@ char	**ft_split(char const *s, char c)
 	while (j < count)
 	{
 		len_str = 0;
-		s = ft_isc(s, c);
-		while (*s != c && *s != 0)
-		{
-			len_str++;
-			s++;
-		}
+		s = ft_isc(s, c, &len_str);
 		result[j] = (char *)malloc(sizeof(char) * (len_str + 1));
 		ft_strlcpy(result[j++], s - len_str, len_str + 1);
 	}

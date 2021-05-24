@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 11:37:31 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/21 12:21:30 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/21 15:32:06 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,32 @@ static int	read_buffer(int fd, char **storage, char **line)
 		return (-1);
 	else
 		return (0);
+}
+
+int	get_next_line(int fd, char **line)
+{
+	static char	*storage[OPEN_MAX];
+	int			buffer_read;
+
+	if (BUFFER_SIZE < 1 || !line || fd < 0 || fd >= OPEN_MAX)
+		return (-1);
+	if (!(storage[fd]))
+		storage[fd] = ft_strdup("");
+	buffer_read = read_buffer(fd, &storage[fd], line);
+	if (buffer_read == 1)
+		return (1);
+	if (buffer_read == -1)
+	{
+		free(storage[fd]);
+		return (-1);
+	}
+	if ((find_break(storage[fd], line)) == 1)
+		return (1);
+	if (ft_strlen(storage[fd]) > 0)
+		*line = ft_strdup(storage[fd]);
+	else
+		*line = ft_strdup("");
+	free(storage[fd]);
+	storage[fd] = NULL;
+	return (0);
 }

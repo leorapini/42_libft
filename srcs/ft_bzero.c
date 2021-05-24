@@ -6,13 +6,13 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 00:00:33 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/02/12 14:14:26 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/21 15:29:56 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*news;
 
