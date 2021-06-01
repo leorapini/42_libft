@@ -6,7 +6,7 @@
 #    By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 21:11:28 by lpinheir          #+#    #+#              #
-#    Updated: 2021/05/21 11:55:45 by lpinheir         ###   ########.fr        #
+#    Updated: 2021/06/01 15:56:06 by lpinheir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ SRC = $(S_DIR)/ft_atoi.c	\
 	$(S_DIR)/ft_uitoh.c     \
 	$(S_DIR)/ft_utoa.c 		\
 	$(S_DIR)/get_next_line.c	\
-
+	$(S_DIR)/ft_htoui.c	\
 
 O_DIR = objs
 OBJ = $(patsubst $(S_DIR)/%.c, $(O_DIR)/%.o, $(SRC)) 

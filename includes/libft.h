@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 09:56:56 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/24 10:03:51 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/06/01 15:55:46 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ void	ft_putchar(char c);
 char	*ft_uitoh(uintptr_t n, int cap);
 char	*ft_utoa(unsigned int n);
 int	get_next_line(int fd, char **line);
+uint32_t	ft_htoui(char *h);
 
 #endif
