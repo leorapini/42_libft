@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 09:56:56 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/06/02 10:08:24 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/06/10 18:28:14 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ char		*ft_utoa(unsigned int n);
 int			get_next_line(int fd, char **line);
 uint32_t	ft_htoui(char *h);
 int		ft_strisdigit(char *s);
+int		ft_ctoi(const char letter);
 
 #endif
