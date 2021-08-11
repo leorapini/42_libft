@@ -21,9 +21,9 @@ uint32_t	ft_htoui(char *h)
 	{
 		if (*h >= '0' && *h <= '9')
 			result = (result * 16) + (*h - '0');
-		else if (*h >= 'a' && *h <='f')
+		else if (*h >= 'a' && *h <= 'f')
 			result = (result * 16) + ((*h - 'a') + 10);
-		else if (*h >= 'A' && *h <='F')
+		else if (*h >= 'A' && *h <= 'F')
 			result = (result * 16) + ((*h - 'A') + 10);
 		h++;
 	}
