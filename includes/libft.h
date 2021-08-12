@@ -62,7 +62,7 @@ char		*ft_uitoh(uintptr_t n, int cap);
 char		*ft_utoa(unsigned int n);
 int			get_next_line(int fd, char **line);
 uint32_t	ft_htoui(char *h);
-int		ft_strisdigit(char *s);
-int		ft_ctoi(const char letter);
+int			ft_strisdigit(char *s);
+int			ft_ctoi(const char letter);
 
 #endif
